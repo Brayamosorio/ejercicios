@@ -1,0 +1,147 @@
+Algoritmo ejercicio1
+	Escribir "hola mundo"
+	
+	
+FinAlgoritmo
+
+Algoritmo ejercicio2
+	Escribir "cual es tu nombre"
+	leer nombre
+	Escribir " hola ",nombre
+	
+FinAlgoritmo
+
+Algoritmo ejercicio3
+	Escribir "ingrese un numero"
+	leer num1
+	Escribir "ingrese otro numero"
+	leer num2
+	oper=num1+num2
+	Escribir "el resultado de la operacion es", oper
+	
+	
+FinAlgoritmo
+
+
+Algoritmo ejercicio4
+	Escribir "ingrese su edad"
+	leer edad
+	si edad>=18 Entonces
+		Escribir "es mayor de edad"
+	SiNo
+		Escribir "es menor de edad"
+	FinSi
+	
+FinAlgoritmo
+
+Algoritmo ejercicio5
+
+	Para i=1  Hasta 100 Con Paso 1 paso Hacer
+		Mostrar i
+	Fin Para
+	
+FinAlgoritmo
+
+Algoritmo ejercicio6
+	
+	Escribir "ingrese un numero"
+	leer n
+	
+	para i=1 hasta n con paso 1 paso Hacer
+		Escribir i
+	FinPara
+	
+FinAlgoritmo
+
+Algoritmo ejercicio7
+	
+	Escribir "ingrese cuantas libras desea convertir"
+	leer libras
+	
+	oper1=libras*0.454
+	oper2=libras*453.59
+	
+	Escribir libras," son ", oper1 " kilogramos "
+	Escribir libras," son ", oper2 " gramos "
+	
+	
+FinAlgoritmo
+
+Algoritmo ejercicio8
+	escribir"escriba una temperatura"
+	leer temp
+	Escribir " escriba en que escala lo desea medir, 1 para celcius, 2 para fahrenheit y 3 para kelvin "
+	leer escala 
+	
+	si escala=1 Entonces
+		celcius=temp
+		faren= (temp* 9/5) + 32
+		kelvin= temp+ 273.15
+		Escribir "su temperatura en celcius es ", celcius
+		Escribir "su temperatura en  fahrenheit  es " faren
+		Escribir "su temperatura en kelvin es" kelvin 
+	FinSi
+	
+	si escala=2 Entonces
+		celcius=(temp - 32) * 5/9
+		faren=temp
+		kelvin= celcius+273.15
+		Escribir "su temperatura en celcius es " celcius
+		Escribir "su temperatura en  fahrenheit  es " faren
+		Escribir "su temperatura en kelvin es" kelvin 
+	FinSi
+	
+	si escala=3 Entonces
+		celcius=(temp-273.15)
+		faren= (temp- 273.15) *9/5 + 32
+		kelvin= temp
+		Escribir "su temperatura en celcius es " celcius
+		Escribir "su temperatura en  fahrenheit  es " faren
+		Escribir "su temperatura en kelvin es" kelvin 
+	FinSi
+	
+	
+FinAlgoritmo
+
+Algoritmo ejercicio9
+	
+	
+	
+	Escribir "ingrese la nota de su primer previo"
+	Leer not1
+	Escribir "ingrese la nota de su segundo previo"
+	leer not2
+	Escribir "ingrese su tercera nota"
+	leer not3
+	Escribir "ingrese la nota de su examen final"
+	leer not4
+	
+	
+	oper=(not1*0.25)+(not2*0.25)+(not3*0.20)+(not4*0.30)
+	
+	
+	Escribir "la definitiva final es ", oper
+	
+	
+	
+	
+FinAlgoritmo
+
+
+Algoritmo ejercicio10
+	
+	Escribir "ingrese cuantas notas desea ingresar"
+	leer numnot
+	
+	prom=0
+
+	Para n=0 hasta numnot Con Paso 1 paso 1 Hacer
+		
+		Escribir "digite la nota"
+		leer nota
+		oper=nota+prom 
+	Fin Para
+	oper1=oper/numnot
+	escribir "su promedio es",oper1
+	
+FinAlgoritmo
