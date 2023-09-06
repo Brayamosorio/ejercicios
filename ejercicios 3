@@ -1,0 +1,88 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+  int condi;
+  double x,y,opersum;
+
+  cout << "ingrese que operacion desea realizar"<<endl;
+  cout << "1 para suma"" ""2 para resta"" " "3 para multiplicacion"" ""4 para division" <<endl;
+  cin>>condi;
+  if(condi==1){
+    cout<<"ingrese un numero"<<endl;
+    cin>>x;
+    cout<<"ingrese otro numero"<<endl;
+    cin>>y;
+    opersum=x+y;
+    cout<<"el resultado de su suma es"<<opersum<<endl;
+  }
+
+ if(condi==2){
+    cout<<"ingrese un numero"<<endl;
+    cin>>x;
+    cout<<"ingrese otro numero"<<endl;
+    cin>>y;
+    opersum=x-y;
+    cout<<"el resultado de su resta  es"<<opersum<<endl;
+  }
+ if(condi==3){
+    cout<<"ingrese un numero"<<endl;
+    cin>>x;
+    cout<<"ingrese otro numero"<<endl;
+    cin>>y;
+    opersum=x*y;
+    cout<<"el resultado de su multiplicacion  es"<<opersum<<endl;
+  }
+ if(condi==4){
+    cout<<"ingrese un numero"<<endl;
+    cin>>x;
+    cout<<"ingrese otro numero"<<endl;
+    cin>>y;
+    opersum=x/y;
+    cout<<"el resultado de su division  es"<<opersum<<endl;
+  }
+
+int main() {
+ 
+ int oper2,oper1, viuda,escol, hijos;
+  cout<<"ingrese la cantidad de hijos que tinene"<<endl;
+  cin>>hijos;
+  cout<<"ingrese cuantos hijos tiene en edad escolar"<<endl;
+  cout<<"recuerde, edad escolar son niños entre 6 y 18 años"<<endl;
+  cin>>escol;
+  cout<<"ingrese 1 la madre  es viuda y 2 si la madre no lo es "<<endl;
+  cin>>viuda;
+
+  if(hijos<=2 and viuda==1 ){
+   
+   oper1= (hijos*70)+(escol*10)+20;
+   cout<<"recibira un monto mensual de "" "<<oper1;
+  }
+  if (hijos<=2 and viuda!=1){
+    oper1= (hijos*70)+(escol*10);
+    cout<<"recibira un monto mensual de "" "<<oper1;
+   }
+ 
+  if(hijos>2 and hijos <=5 and viuda==1 ){
+   
+   oper1= (hijos*70)+(escol*10)+20;
+   cout<<"recibira un monto mensual de "" "<<oper1;
+  }
+  if (hijos>2 and hijos <=5 and viuda!=1){
+    oper1= (hijos*70)+(escol*10);
+    cout<<"recibira un monto mensual de "" "<<oper1;
+   }
+
+  if(hijos>5 and viuda==1 ){
+   
+   oper1= (hijos*70)+(escol*10)+20;
+   cout<<"recibira un monto mensual de "" "<<oper1;
+  }
+  if (hijos>5 and viuda!=1){
+    oper1= (hijos*70)+(escol*10);
+    cout<<"recibira un monto mensual de "" "<<oper1;
+   }
+
+  return 0;
+}
