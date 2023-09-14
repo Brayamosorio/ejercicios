@@ -1,48 +1,56 @@
 #include <iostream>
 using namespace std;
-
 int main() {
+    int minutos1 = 60;
+    int segundos1 = 30;
+    int minutos2 = 45;
+    int segundos2 = 45;
 
-  int condi;
-  double x,y,opersum;
+    int total_segundos1 = minutos1 * 60 + segundos1;
+    int total_segundos2 = minutos2 * 60 + segundos2;
+    int tiempo_total_segundos = total_segundos1 + total_segundos2;
 
-  cout << "ingrese que operacion desea realizar"<<endl;
-  cout << "1 para suma"" ""2 para resta"" " "3 para multiplicacion"" ""4 para division" <<endl;
-  cin>>condi;
-  if(condi==1){
-    cout<<"ingrese un numero"<<endl;
-    cin>>x;
-    cout<<"ingrese otro numero"<<endl;
-    cin>>y;
-    opersum=x+y;
-    cout<<"el resultado de su suma es"<<opersum<<endl;
-  }
+    int horas = tiempo_total_segundos / 3600;
+    int minutos = (tiempo_total_segundos % 3600) / 60;
+    int segundos = tiempo_total_segundos % 60;
 
- if(condi==2){
-    cout<<"ingrese un numero"<<endl;
-    cin>>x;
-    cout<<"ingrese otro numero"<<endl;
-    cin>>y;
-    opersum=x-y;
-    cout<<"el resultado de su resta  es"<<opersum<<endl;
-  }
- if(condi==3){
-    cout<<"ingrese un numero"<<endl;
-    cin>>x;
-    cout<<"ingrese otro numero"<<endl;
-    cin>>y;
-    opersum=x*y;
-    cout<<"el resultado de su multiplicacion  es"<<opersum<<endl;
-  }
- if(condi==4){
-    cout<<"ingrese un numero"<<endl;
-    cin>>x;
-    cout<<"ingrese otro numero"<<endl;
-    cin>>y;
-    opersum=x/y;
-    cout<<"el resultado de su division  es"<<opersum<<endl;
-  }
+    cout<< "El tiempo total utilizado por ambos atletas es: " << horas << " horas, " << minutos << " minutos y " << segundos << " segundos." <<endl;
 
+    return 0;
+}
+    
+
+
+
+#include <iostream>
+using namespace std;
+int main() {
+    double pies = 10.0;
+    double metros = 5.0;
+    double metros_pies = pies / 3.2808;
+    double pulgadas_metros = metros / 0.0254;
+
+    double pulgadas_pies = pies * 12.0;
+
+    double total_metros = metros + metros_pies;
+
+    double millas_metros = total_metros / 1609.0;
+    double yardas_metros = total_metros * 1.0936;
+    double pulgadas_metros_total = total_metros / 0.0254;
+
+    cout << "La suma de " << pies << " pies y " << metros << " metros es igual a:" << std::endl;
+    cout << (total_metros * 39.3701) << " pulgadas" << endl;
+    cout << (yardas_metros * 1.0936) << " yardas" << endl;
+    cout << total_metros << " metros" << endl;
+    cout << (millas_metros) << " millas" << endl;
+
+    return 0;
+}
+
+
+
+#include <iostream>
+using namespace std;
 int main() {
  
  int oper2,oper1, viuda,escol, hijos;
@@ -86,3 +94,85 @@ int main() {
 
   return 0;
 }
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+  int condi;
+  double x,y,opersum;
+
+  cout << "ingrese que operacion desea realizar"<<endl;
+  cout << "1 para suma"" ""2 para resta"" " "3 para multiplicacion"" ""4 para division" <<endl;
+  cin>>condi;
+  if(condi==1){
+    cout<<"ingrese un numero"<<endl;
+    cin>>x;
+    cout<<"ingrese otro numero"<<endl;
+    cin>>y;
+    opersum=x+y;
+    cout<<"el resultado de su suma es"<<opersum<<endl;
+  }
+
+ if(condi==2){
+    cout<<"ingrese un numero"<<endl;
+    cin>>x;
+    cout<<"ingrese otro numero"<<endl;
+    cin>>y;
+    opersum=x-y;
+    cout<<"el resultado de su resta  es"<<opersum<<endl;
+  }
+ if(condi==3){
+    cout<<"ingrese un numero"<<endl;
+    cin>>x;
+    cout<<"ingrese otro numero"<<endl;
+    cin>>y;
+    opersum=x*y;
+    cout<<"el resultado de su multiplicacion  es"<<opersum<<endl;
+  }
+ if(condi==4){
+    cout<<"ingrese un numero"<<endl;
+    cin>>x;
+    cout<<"ingrese otro numero"<<endl;
+    cin>>y;
+    opersum=x/y;
+    cout<<"el resultado de su division  es"<<opersum<<endl;
+  }
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+int main() {
+    std::vector<int> distancias = {50, 55, 57, 58, 60};
+    int t = 174;
+    int max_suma = 0;
+    std::vector<int> max_combinacion;
+
+    for (int i = 0; i < distancias.size(); i++) {
+        for (int j = i + 1; j < distancias.size(); j++) {
+            for (int k = j + 1; k < distancias.size(); k++) {
+                int suma = distancias[i] + distancias[j] + distancias[k];
+                if (suma <= t && suma > max_suma) {
+                    max_suma = suma;
+                   max_combinacion = {distancias[i], distancias[j], distancias[k]};
+                }
+            }
+        }
+    }
+
+    std::cout << "Las tres distancias que suman la mayor cantidad posible son: ";
+    for (int i = 0; i < max_combinacion.size(); i++) {
+        std::cout << max_combinacion[i] << " ";
+    }
+    std::cout << "para un total de " << max_suma << " millas." << std::endl;
+
+    return 0;
+    
+    }
+
+
